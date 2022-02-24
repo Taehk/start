@@ -8,6 +8,7 @@ public class Test06 {
 		 */
 		
 		double no = 3.14 + 10;
+		System.out.println(no);
 		
 		// 'a'의 다섯번째 이후 문자를 출력하시오.
 		
