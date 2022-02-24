@@ -44,3 +44,4 @@
   깃허브 레포터리 다운로드(Import projects, Pull) - 상단에 위치<br>
   연산자 및 그 종류<br>
   사용자에게 입력받기(import java.util.*; Scanner sc = new Scanner(System.in);)<br>
+  <i>문자열 데이터 비교시 문자열.equals(비교할 문자열) 사용해서 비교하기<br></i>
