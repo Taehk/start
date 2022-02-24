@@ -16,7 +16,8 @@
 	  -> 토큰 코드 입력(저장되어 있으면 생략) -> 레포용 폴더에 다운
   	좌측 하단의 git repositories의 working tree -> 필요한 프로그램 우클릭 -> Import Projects 하면 이클립스에 올라온다.
 	
-  올라온 프로젝트 우클릭 -> Team -> Pull
+  수정된 소스코드를 연동된 리포지터리와 동기화(pull)
+ 	 수정한 프로젝트 우클릭 -> Team -> Pull
 
 # Day01
   JDK 및 이클립스 설치 등 개발환경 조성 (D2coding 폰트, utf-8 인코딩 설정)
