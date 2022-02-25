@@ -45,3 +45,9 @@
   연산자 및 그 종류<br>
   사용자에게 입력받기(import java.util.*; Scanner sc = new Scanner(System.in);)<br>
   문자열 데이터 비교시 문자열.equals(비교할 문자열) 사용해서 비교하기<br>
+  
+# Day04
+  3일차 연산자 남은 부분 (Day03에 필기)<br>
+  import시 중복된 클래스 적용 우선 순위 (\*보단 직접 명시한 것 부터)<br>
+  특정 범위 랜덤한 숫자 발생시키는 방법 (Math.random())<br>
+
