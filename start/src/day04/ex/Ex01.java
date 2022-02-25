@@ -30,6 +30,5 @@ public class Ex01 {
 		System.out.println("  가장 큰 수");		
 		System.out.println("result : "+result);
 		
-		
 	}
 }
