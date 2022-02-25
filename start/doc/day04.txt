@@ -1,0 +1,22 @@
+#day04
+
+
+	import시에 사용할 클래스 경로를 지정하면
+		ㄴ ex) import java.util.*;
+	util 패키지 하위에 바로 속한 클래스만 사용 가능하다.
+	또한 2개의 import를 사용할때 클래스명이 겹친 경우 *가 아닌 직접 명시한 클래스를 우선 적용시킨다.
+		ㄴ ex) import pack1.asd.date;
+			   import pack2.qwe.*;
+			   		ㄴ pack1의 date 우선 적용
+			   		
+	특정 범위 랜덤한 숫자 발생시키는 방법
+		Math 클래스 내에 0 이상 1 미만 실수를 발생시켜주는 함수
+		(* java.lang에 있는데 static클래스로 존재하기 때문에 클래스명만 지시해주면 된다.)
+			0 <= Math.random() < 1   x T
+			0 <= Math.random() * T < T
+				ㄴ ex) a~b사이의 랜덤한 정수 (a<b)
+						(int) (Math.random() * (큰수 - 작은수 +1) + 작은수)
+						 
+	문자열에서 문자를 추출하는 방법
+		문자열.charAt(위치값) : 위치값은 0부터 시작
+		sc.next().charAt(0) 얻어온 문자열의 첫 문자
