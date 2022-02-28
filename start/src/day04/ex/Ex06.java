@@ -14,7 +14,7 @@ public class Ex06 {
 		//	Integer.parseInt(문자열)
 		int no = Integer.parseInt(sno);
 		no = 15;
-		
+		System.out.print(no);
 		
 	}
 }

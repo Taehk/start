@@ -15,6 +15,11 @@ public class Test01 {
 		float no5 = 185.5F;
 		double no6 = 3.14;
 		double no7 = 10.;
+
+		System.out.println(no1 + no2 + no3 + no4 + no5 + no6 + no7);
+		System.out.println(bool);
+		System.out.println(cno);
+		
 	}
 	
 }
