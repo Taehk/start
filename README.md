@@ -58,3 +58,9 @@
   조건문(if문, switch문 <- break확인 제대로 하기)<br>
   반복문(for문, 향상된 for문 <- 배열사용, while문)<br>
   배열<br>
+  
+# Day06
+  반복문 추가설명<br>
+  flag 기법<br>
+  레이블 있는 반복문<br>
+  전역/지역 변수<br>
