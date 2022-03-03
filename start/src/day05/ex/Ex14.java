@@ -26,16 +26,18 @@ public class Ex14 {
 		int num2 = (int)(Math.random() * (high - low + 1)+low);
 		
 		// 최대 공약수 구하기
-		int gongyak = 0;
+		int gongyak = 1;
 		
 		int small = 0;	// 작은 쪽까지 나눠보기
 		
 		if (num1 > num2) small = num1;
 		else small = num2;
+		// ㄴ int samll = (num1 > num2) ? num1 : num2;
 		
-		for (int i = 0; i<small; i++) {
-				if(num1 % (i+1) == 0 & num2 % (i+1) == 0) {	// 둘 다 나누어 떨어질때
-					gongyak = (i+1);
+		for (int i = small; i > 1; i--) {
+				if(num1 % i == 0 & num2 % i == 0) {	// 둘 다 나누어 떨어질때
+					gongyak = i;
+					break;
 				}
 			}
 		System.out.printf("%d와 %d의 최대공약수는 %d입니다.\n", num1, num2, gongyak);
