@@ -58,7 +58,7 @@ public class Ex04 {
 		System.out.println("---------------------------------");
 		System.out.printf("총점 : %3d\n",grade[grade.length-1]);
 		System.out.printf("평균 : %2.2f\n", avg);
-
+		
 	}
 
 }
