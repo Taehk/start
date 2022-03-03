@@ -1,10 +1,14 @@
 package day07;
 
+/*
+ * 배열 선언 연습
+ * 
+ */
 public class Test01 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		int num[];
+		int[] num1;
 	}
 
 }
