@@ -85,11 +85,9 @@ public class Ex03 {
 		}
 		System.out.println();
 		
-		int a = 0;
 		for(int i = 0; i<5; i++) {
 			for(int j = 0; j<(i+1); j++) {
-				a++;
-				System.out.printf("%-2d",a);
+				System.out.printf("%-2d",(i+1)*i/2+j+1);
 				if(i==j) {
 					continue;
 				}

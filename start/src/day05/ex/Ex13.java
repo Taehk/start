@@ -29,7 +29,7 @@ public class Ex13 {
 		// 회문수 판별
 		for (int i = 0; i < 3; i++) {
 			ch1 = input.charAt(i);			// 숫자 첫 문자부터
-			ch2 = input.charAt(input.length()-(i+1));	// 숫자 마지막 문자부터
+			ch2 = input.charAt(input.length()-i-1);	// 숫자 마지막 문자부터
 			if(ch1 == ch2) {
 				check += 1;
 			}
