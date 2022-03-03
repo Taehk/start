@@ -89,7 +89,7 @@ public class Ex03 {
 		for(int i = 0; i<5; i++) {
 			for(int j = 0; j<(i+1); j++) {
 				a++;
-				System.out.printf("%3d",a);
+				System.out.printf("%-2d",a);
 				if(i==j) {
 					continue;
 				}
