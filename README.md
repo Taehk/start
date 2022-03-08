@@ -83,3 +83,12 @@
   2. 매개변수의 갯수, 순서, 형태 중 하나 이상이 달라야 한다.
   3. 반환값은 상관없다.<br>
   객체지향 OOP<br>
+ 
+# Day10
+  객체지향언어<br>
+  상속<br>
+  생성자함수<br>
+  ***this()***<br>
+  ctrl + f로 relpace하기<br>
+  Friend[] ane = new Friend[4]; 는 null값으로 주소 공간만 제공<br>
+  for문+ ane[i] = new Friend();로 각 방에 데이터 채워야함<br>
