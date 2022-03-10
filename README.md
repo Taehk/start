@@ -93,3 +93,8 @@
   Friend[] ane = new Friend[4]; 는 null값으로 주소 공간만 제공<br>
   for문+ ane[i] = new Friend();로 각 방에 데이터 채워야함<br>
   가변인자<br>
+
+# Day11
+  ***상속***(객체지향언어 특징)<br>
+  함수의 오버라이딩(함수 재정의)<br>
+  import와 package(+ static, final import)<br>
