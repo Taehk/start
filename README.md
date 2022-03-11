@@ -98,3 +98,8 @@
   ***상속***(객체지향언어 특징)<br>
   함수의 오버라이딩(함수 재정의)<br>
   import와 package(+ static, final import)<br>
+  
+# Day12
+  다형성<br>
+  ㄴ추상 함수 + 추상 클래스<br>
+  ㄴ인터페이스<br>
