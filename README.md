@@ -113,3 +113,18 @@
 
 # Day13
  예외처리 및 강제예외처리(예외던지기)<br>
+ 
+# Day14
+ java.util패키지 소속의 유용한 클래스<br>
+ 1. isNull(Object obj)<br>
+ 2. ..<br>
+ Object클래스<br>
+ - equals() 오버라이드<br>
+ - toString() 오버라이드<br>
+ - clone()<br>
+ - hashCode()<br>
+ String 클래스<br>
+ - StringBuffer<br>
+ - StringTokenizer<br>
+ Math클래스 - 모두 static멤버라 new 사용 X<br>
+ Wrapper class(래퍼클래스) - 기본데이터타입을 객체화 시키는 Boxing을 위함<br>
