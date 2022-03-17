@@ -32,12 +32,11 @@ public class Ex01 {
 			try {
 				no = Integer.parseInt(arr[i]);	// 변환
 				cal[i] = no;	// 변환이 성공하면 cal 배열에 넣기
-				
+			} catch(NumberFormatException e) {	// 숫자 변환 불가능한 경우
+				System.out.println("## 숫자로 변환이 불가능합니다.");
+				continue;				
 			} catch(IndexOutOfBoundsException e) {	// 배열 인덱스 밖으로 나간 경우
 				System.out.println("# 배열 인덱스 외부로 나갔습니다.");
-				continue;
-			} catch(RuntimeException e) {	// 숫자 변환 불가능한 경우
-				System.out.println("## 숫자로 변환이 불가능합니다.");
 				continue;
 			}
 		}
