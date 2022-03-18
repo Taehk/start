@@ -140,6 +140,6 @@
 	+@ Iterator클래스 - 데이터 꺼내기 위해 사용하는 클래스, Collections클래스 - 콜렉션의 유틸리티적 클래스<br>
  2. Set계열(순서 보장X, 중복 저장X) + 데이터 꺼내는 함수 존재X Iterator/List형 변환 이후 추출<br>
 	- HashSet : HashCode를 이용해 정렬<br>
-	- TreeSet : TreeSort라는 알고리즘을 이용한 컬렉션의 일종<br>
+	- TreeSet : TreeSort라는 알고리즘을 이용한 컬렉션의 일종 -> 입력되는 데이터는 항상 정렬가능한 데이터이어야 한다.<br>
 	+@ subSet()함수, headSet(E toElement)함수, tailSet(E fromElement)<br>
  3. Map계열<br>
