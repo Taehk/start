@@ -141,5 +141,6 @@
  2. Set계열(순서 보장X, 중복 저장X) + 데이터 꺼내는 함수 존재X Iterator/List형 변환 이후 추출<br>
 	- HashSet : HashCode를 이용해 정렬<br>
 	- TreeSet : TreeSort라는 알고리즘을 이용한 컬렉션의 일종 -> 입력되는 데이터는 항상 정렬가능한 데이터이어야 한다.<br>
+	+ 그렇기 때문에 TreeSet을 만들때 정렬 방식을 알려주는 Comparator을 이용하는 방법, 정렬 가능한 클래스로 미리 만드는 Comparable인터페이스를 구현한 클래스 작성하는 방법 등을 사용한다.<br>
 	+@ subSet()함수, headSet(E toElement)함수, tailSet(E fromElement)<br>
  3. Map계열<br>
