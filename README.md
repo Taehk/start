@@ -128,3 +128,18 @@
  - StringTokenizer<br>
  Math클래스 - 모두 static멤버라 new 사용 X<br>
  Wrapper class(래퍼클래스) - 기본데이터타입을 객체화 시키는 Boxing을 위함<br>
+
+# Day15
+ Random클래스, BigDecimal클래스<br>
+ 정규식검사(java.util.Pattern, java.util.Macher 사옹 -> 입력마스크)<br>
+ 콜렉션<br>
+ 1. List계열 (입력순서 보장, 중복 데이터 저장 가능)<br>
+	- Vector : 배열 형태로 저장하는 컬렉션의 일종 / 데이터 변화가 거의 없는 프로그램에 많이 사용<br>
+	- ArrayList : Vector + 자동 동기화<br>
+	- LinkedList : 데이터 중간에 넣기, 삭제 빠름 / 데이터 누적 느림<br>
+	+@ Iterator클래스 - 데이터 꺼내기 위해 사용하는 클래스, Collections클래스 - 콜렉션의 유틸리티적 클래스<br>
+ 2. Set계열(순서 보장X, 중복 저장X) + 데이터 꺼내는 함수 존재X Iterator/List형 변환 이후 추출<br>
+	- HashSet : HashCode를 이용해 정렬<br>
+	- TreeSet : TreeSort라는 알고리즘을 이용한 컬렉션의 일종<br>
+	+@ subSet()함수, headSet(E toElement)함수, tailSet(E fromElement)<br>
+ 3. Map계열<br>
