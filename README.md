@@ -139,7 +139,7 @@
 	- LinkedList : 데이터 중간에 넣기, 삭제 빠름 / 데이터 누적 느림<br>
 	+@ Iterator클래스 - 데이터 꺼내기 위해 사용하는 클래스, Collections클래스 - 콜렉션의 유틸리티적 클래스<br>
  2. Set계열(순서 보장X, 중복 저장X) + 데이터 꺼내는 함수 존재X Iterator/List형 변환 이후 추출<br>
-	- HashSet : HashCode를 이용해 정렬<br>
+	- HashSet : HashCode를 이용해 정렬 -> equals(), hashCode() 오버라이드로 객체 중복 지시 가능<br>
 	- TreeSet : TreeSort라는 알고리즘을 이용한 컬렉션의 일종 -> 입력되는 데이터는 항상 정렬가능한 데이터이어야 한다.<br>
 	+ 그렇기 때문에 TreeSet을 만들 때<br>
 	(1). 정렬 방식을 알려주는 Comparator을 이용하는 방법<br>
