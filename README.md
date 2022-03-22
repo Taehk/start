@@ -5,6 +5,7 @@
 
 # *새 폴더와 이클립스 연동 시에 폰트와 인코딩 변경(utf-8)*
 # Class 만들때 public static void main 체크하면 자동으로 입력되서 생성됨.
+# 클래스 + 함수 많이 만들어보고 문제 풀어보기
 # StarUML 논리처리 다이어그램 그리는 프로그램
 # 깃허브 사용법
   - 깃리포지터리에 업로드하는 법<br>  		
@@ -132,7 +133,7 @@
 # Day15
  Random클래스, BigDecimal클래스<br>
  정규식검사(java.util.Pattern, java.util.Macher 사옹 -> 입력마스크)<br>
- 콜렉션<br>
+ 컬렉션 (컬렉션에 컬렉션 저장 가능)<br>
  1. List계열 (입력순서 보장, 중복 데이터 저장 가능)<br>
 	- Vector : 배열 형태로 저장하는 컬렉션의 일종 / 데이터 변화가 거의 없는 프로그램에 많이 사용<br>
 	- ArrayList : Vector + 자동 동기화<br>
@@ -145,4 +146,38 @@
 	(1). 정렬 방식을 알려주는 Comparator을 이용하는 방법<br>
 	(2). 정렬 가능한 클래스로 미리 만드는 Comparable인터페이스를 구현한 클래스 작성하는 방법 등을 사용한다.<br>
 	+@ subSet()함수, headSet(E toElement)함수, tailSet(E fromElement)<br>
- 3. Map계열<br>
+
+# Day16
+ 3. Map계열 (키 : 데이터) <- 데이터를 손쉽게 구분할 목적<br>
+ 	- TreeMap : TreeSet과 같이 내부에서 정렬하면서 데이터를 기억하는 Map<br>
+ 	- HashMap : 키값만 꺼내는 함수가 keySet();임<br>
+ 	- entrySet() : 하나만 저장이 되는 Set에 키와 값을 하나로 묶어 저장해주는 함수 = <br>
+ 	- Value Object(VO클래스) : 빈클래스 -> 기능이 없고 데이터를 하나로 묶어주는 클래스
+ 	- Properties : Map의 역할을 하는 클래스 (cmd창에서 인코딩 필요) <br>
+ 4. 제너릭스 : 컬렉션에서 꺼낼 때는 강제 형변환 해줘야 하는 것을 미리 해주는 것<br>
+ 5. 이노테이션 : 내부적으로 약속된 실행을 자동으로 처리하도록 하는 명령의 일종 ex) @Override<br>
+ 
+# Day17
+Stream : 외부 장치와 데이터를 주고 받는 방법<br>
+import.java.io.* 패키지<br>
+	- 방향성이 있고 단방향이다. = 주고 받으려면 2개가 필요하다<br>
+	- 종류<br>
+		1) 방향성<br>
+			(1). 프로그램에서 데이터가 들어오는 방향 = InputStream, Readere <br>
+				- int read()	= 1byte 읽기<br>
+				- int read(byte[] b)	= b배열에 기억하고 반환값 데이터 개수<br>
+				- int read(byte[] b, int offset, int len)	= offset(시작위치), len(읽을 개수)<br>
+			(2). 프로그램에서 데이터가 나가는 방향 = OutputStream, Writer <br>
+				- void write() 위와 동일<br>
+		2) 데이터의 양<br>
+			(1). byte단위(뒤에 Stream) = InputStream, OutputStream : 기계어 처리 가능<br>
+			(2). char단위(뒤에 Reader, Writer) = Reader, Writer : 문자처리만 가능<br>
+		3) 상대방 종류
+			(1). 타겟 스트림(기본스트림) = 필수<br>
+			(2). 필터 스트림(보조스트림) = 선택적 / 속도향상or개발자 편의 / 반드시 같은 방향 같은 크기만 연결 가능(바-바 문-문)<br>
+				- BufferedInput/OutputStream : 성능 향상 + .flush() 버퍼 지우기 필요<br>
+				- DataInput/OutputStream : 자바 데이터형 유지 가능 but 순서 지켜야해서 귀찮음<br>
+				- PrintStream/PrintWriter : 내부적으로 Buffered와 연결, 자바 데이터형 그대로 출력 가능, 파일과 직접 연결 = 타겟스트림 내부에서 생성 / .flsuh() 필요 + 입력X<br>
+객체의 직렬화<br>
+- 클래스 전체를 데이터로 상대방(외부장치)에 입출력 가능 = 네트워크 같이 서로 떨어진 경우 양쪽 다 같은 패키지이름+클래스이름이 존재 해야함<br>
+- Serialzable 인터페이스를 구현한 클래스만 가능<br>
