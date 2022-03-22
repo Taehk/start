@@ -1,0 +1,6 @@
+#~
+#Mon Mar 21 15:31:49 KST 2022
+age=16
+tel=010-1111-1111
+name=\uD64D\uAE38\uB3D9
+addr=\uC728\uB3C4\uAD6D
