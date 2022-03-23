@@ -17,7 +17,7 @@ public class Test06 {
 		 		Scanner(File file)
 		 */
 		
-		// Scanner를 이요요해서 day17/result/FileTest01.txt 파일을 읽어보자
+		// Scanner를 이용해서 day17/result/FileTest01.txt 파일을 읽어보자
 		
 		// File준비
 		File file = new File("src/day17/result/FileTest01.txt");
