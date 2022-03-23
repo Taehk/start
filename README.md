@@ -182,4 +182,28 @@ import.java.io.* 패키지<br>
 객체의 직렬화<br>
 - 클래스 전체를 데이터로 상대방(외부장치)에 입출력 가능 = 네트워크 같이 서로 떨어진 경우 양쪽 다 같은 패키지이름+클래스이름이 존재 해야함<br>
 - Serialzable 인터페이스를 구현한 클래스만 가능<br>
+- 크기가 다른(byte / char) 스트림을 연결할때 사용하는 보조보조 스트림 InputStreamReader / OutputStreamWriter + 기본스트림 + 보조스트림(다른 크기)와 함께 사용<br>
+
+# Day18
+Thread(스레드)<br>
+	public 스레드명 extends Thread / implements Runnable{
+		@Override
+		public void run(){
+		}
+	}
+- 독립적인 메모리를 할당받지 못하고 프로세스 프로그램의 메모리를 공유한다.(반드시 프로세스가 실행된 상태여야한다.)<br>
+- 스레드 프로그램 동작하는 법<br>
+	1) Thread 상속<br>
+		(1) new 시킨다.	->	New Born 상태가 된다.
+		(2) start 시킨다.	->	Runnable 상태로 전위시킨다.
+	2) Runnable 인터페이스를 구현한 경우<br>
+		(1) new 시킨다.	->	일반적인 new를 통한 메모리 할당(일반 클래스를 사용하기 위한 객체 지향 방법)<br>
+		(2) Thread t1 = new Thread((1)의 결과);	-> New Born상태가 된다.<br>
+		(3) t1.start();	-> Runnable 상태로 전위된다.
+- 하나의 스레드 프로그램은 여러 번 실행할 수 있고 독립적으로 실행된다.<br>
+- Block상태로 전위하기 (실행을 잠시 중단하는 상태) : 스레드.sleep(밀리세컨); 시간 지나면 자동으로 Runnable 전위<br>
+- 스레드가 있는 프로그램의 경우 main()과 스레드 모두 종료되어야 프로그램이 종료된다.<br>
+	1) stop(); 사용금지명령이다. = run()을 자연스럽게 종료시켜야 한다.<br>
+	2) run()함수에 제어변수를 이용해서 처리하자.<br>
+* 일시중지 - suspend() / 재실행하기 - resume()<br>
 </pre>
