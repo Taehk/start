@@ -206,4 +206,45 @@ Thread(스레드)<br>
 	1) stop(); 사용금지명령이다. = run()을 자연스럽게 종료시켜야 한다.<br>
 	2) run()함수에 제어변수를 이용해서 처리하자.<br>
 * 일시중지 - suspend() / 재실행하기 - resume()<br>
+
+# Day20 - Oracle시작
+주석 /* */이랑 --(sqldeveloper에서만 가능한 주석)<br>
+질의 명령 : 데이터에 관한 질의<br>
+오라클에만 PL/SQL기능 존재<br>
+실행은 ctrl+enter<br>
+명령 종류<br>
+  1. DML명령<br>
+  	- Database Manipulation Language (데이터 조작 언어)<br>
+	= 데이터를 추가, 수정, 삭제, 조회하는 작업을 하는 명령<br>
+		Create	- INSERT<br>
+		Read	- SELECT<br>
+		Update	- UPDATE<br>
+		Delete	- DELETE<br>
+  2. DDL명령<br>
+  	- Data Definition Language (데이터 정의 언어)<br>
+	= 개체를 만들고 수정하는 언어<br>
+		CREATE	- 개체(테이블, 사용자, 함수, 인덱스,..)를 만들 때 사용하는 명령<br>
+		ALTER	- 개체를 수정하는 명령<br>
+		DROP	- 개체를 삭제하는 명령<br>
+		TRUNCATE - 테이블을 잘라내는 명령<br>
+  3. DCL명령<br>
+  	- Data Control Language (데이터 제어 언어)<br>
+	= 작업을 적용시킨다던지 권한을 준다던지<br>
+		COMMIT<br>
+		ROLLBACK<br>
+		<br>
+		GRANT<br>
+		REVOKE<br>
+오라클 데이터 타입<br>
+	1. 숫자 NUMBER, NUMBER(숫자) -> 숫자는 사용자릿수<br>
+		NUMBER(유효자릿수, 소수이하자릿수)<br>
+	2. 문자 CHAR -> 고정 문자수 문자열 데이터타입<br>
+			CHAR(숫자) -> 바이트수만큼의 문자 기억<br>
+			CHAR(숫자 CHAR) -> 숫자갯수만큼의 문자 기억<br>
+		VARCHAR2 -> 가변 문자수 문자열 데이터타입<br>
+			 VARCHAR2(숫자) -> 숫자수만큼의 바이트만큼 문자 기억<br>
+			 VARCHAR2(숫자, CHAR) -> 숫자갯수만큼의 문자를 기억<br>
+		ex) CHAR(10) -> 'A' -> 이 문자를 기억할 때 10바이트를 모두 사용<br>
+		    VARCHAR2(10) -> 'A' -> 1바이트로 문자 기억<br>
+	3. 날짜<br>
 </pre>
