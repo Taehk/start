@@ -9,6 +9,15 @@
 # 클래스 + 함수 많이 만들어보고 문제 풀어보기
 # StarUML 논리처리 다이어그램 그리는 프로그램
 # 트랜잭션 : "일을 처리하는 단위" 
+# JDBC 사용법
+  - MVN Repository<br>
+  	1. Ojdbc6 검색
+	2. 버젼 클릭
+	3. files의 jar 다운
+	4. 편한 경로에 저장
+	5. 프로젝트 우클릭 -> Properties
+	6. Java Build Path -> Libraries 탭 -> Add External JARs -> Ojdbc6들고오기
+	7. 적용
 # 깃허브 사용법
   - 깃리포지터리에 업로드하는 법<br>  		
 	깃에서 리포지터리 생성 -> 토큰 코드 저장<br>
