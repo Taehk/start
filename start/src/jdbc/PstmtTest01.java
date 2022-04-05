@@ -21,6 +21,7 @@ public class PstmtTest01 {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("조회할 부서번호를 입력하세요! : ");
 		int dno = sc.nextInt();
+		sc.close();
 		
 		// 작업순서
 		try {
