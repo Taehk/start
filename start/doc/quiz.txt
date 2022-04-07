@@ -1,0 +1,219 @@
+# JAVA_김태현.TXT
+
+문제1)
+	boolean, char, byte, int, short, long, float, double	
+	----------------------------------------------------------------
+		답안
+			정수형 : byte, int, shor, long
+			실수형 : float, double
+			논리형 : boolean
+			문자형 : char
+
+문제2)
+	int num = 75000;
+	----------------------------------------------------------------
+		답안
+			int num;
+			num = 75000;
+
+문제3)
+	1 - a = 12 / b = 23
+	2 - a = 12 / b = 22
+	3 - a = 12 / b = 21
+	----------------------------------------------------------------
+		답안
+			++변수 : 처리한 뒤에 +1 계산
+			변수++ : +1 계산한 뒤에 처리
+			
+
+문제4)
+	private		- 현재 클래스 내에서만
+	default		- 현재 패키지 내에서만
+	protected	- 현재 패키지 + 상속받은 클래스
+	public		- 접근제한 없음
+	----------------------------------------------------------------
+		답안
+			1. public
+				-> 모든 곳에서 사용할 수 있다				
+			2. protected
+				-> 상속받은 하위 클래스 + 같은 패키지 소속의 클래스에서만 사용 가능			
+			3. 생략된 경우
+				-> 같은 패키지 소속의 클래스들에서만 사용가능			
+			4. private
+				-> 다른 클래스에서는 절대로 사용 불가능				
+			접근 지정자의 범위
+				pirvate < 생략 < protected < public 
+
+문제5)
+	클래스명은 특수문자 X
+	----------------------------------------------------------------
+		답안
+			특수문자는 _ $만 허용
+			숫자 시작 X
+			예약어 X
+			파스칼 표기법 사용
+
+문제6)
+	int i = 1;
+	do{
+	  System.out.printf(" 5 X %2d = %2d \n", i, 5*i);
+	  i++;
+	} while(i < 10);
+	----------------------------------------------------------------
+		답안
+			동일
+	
+문제7)
+	private int mno;
+	private String name, id;
+	----------------------------------------------------------------
+		답안
+				은닉화란?
+					이처럼 중요한 요소인 변수를 사용자가 함부로 변경하지 못하도록 방지하는 기법
+								( = 결점 있는 데이터가 들어올 수 없도록)
+						ex) 형식이 2002년 03월 08일인데 사용자가 입력을 02/03/08로 하는 경우 등
+					1. 중요한 데이터가 기억될 변수의 접근지정자를 private로 지정한다.
+						-> 그 변수는 다른 사용자가 사용할 수 없게 한다.
+					2. 대신 변수의 데이터를 변경하거나 값을 꺼내올 수 있도록 방법(함수)을 만들어 놓는다.
+		
+문제8)
+	HashMap<String, String> map = new HashMap<String, String>();
+	map.put("이름", "홍길동");
+	map.put("나이", "24");
+	map.put("성별", "남자");
+	
+	Set<string> key = map.keySet();
+	Iterator itor = set.iterator();
+	
+	while(itor.hasNext()){
+		String key = itor.next();
+		String value = map.get(key);
+		System.out.println(key + " - " + value);
+	}
+	----------------------------------------------------------------
+		답안
+
+문제9)
+	public class Plus implements Calc{
+	  private int a = 0;
+	  private int b = 0;
+		public Plus(){}
+		public Plus(int a, int b){
+			this.a = a;
+			this.b = b;
+			cal();
+		}
+
+	        @Override
+		public double cal(){
+		   return (double)a+b;
+		}
+	}
+	----------------------------------------------------------------
+		답안
+
+문제11)
+public class MemberSQL{
+    public String method(int code){
+	Stringbuffer[] buff = new Stringbuffer[1024];	-> StringBuffer buff = new StringBuffer();
+	switch(code){
+	case : 1
+		buff.append("SELECT ");
+		buff.append("	name, gender ");
+		buff.append("FROM ");
+		buff.append("	member ");
+		buff.append("WHERE ");
+		buff.append("	id = ? ");
+		break;
+	case : 2
+		buff.append("UPDATE ");
+		buff.append("	member ");
+		buff.append("SET ");
+		buff.append("	age = ? ");
+		buff.append("WHERE ");
+		buff.append("	id = ? ");
+		break;
+	}
+	return buff.toString();
+   }
+}
+	----------------------------------------------------------------
+		답안
+
+-----------------------------------------------------------
+
+문제1)
+	long, int, short
+	----------------------------------------------------------------
+		답안
+
+문제2)
+	double val = 3.14;
+	----------------------------------------------------------------
+		답안
+
+문제3)
+	10
+	----------------------------------------------------------------
+		답안
+
+문제4)
+	char[] arry = new char[10];
+	for(int i = 0; i < 10; i++){
+		char[i] = (char)('A' + i);
+	}
+	----------------------------------------------------------------
+		답안
+
+문제5)
+	B, Z, 
+	----------------------------------------------------------------
+		답안
+
+문제6)
+	private class Class02{
+		String name;
+		int no;
+	}
+	----------------------------------------------------------------
+		답안
+
+문제7)
+	private class Album{
+		private int cdno;
+		private String cdname, singer;
+	}
+	----------------------------------------------------------------
+		답안
+
+문제8)
+	public class Circle implements Round{
+		private int rad = 0;
+		private double area = 0.;
+		
+		public Circle(){}
+		public Circle(int rad){
+			this.rad = rad;
+			getArea();
+		}
+
+		@Override
+		public double getArea(){
+			return rad * rad * 3.14
+		}
+	}
+	----------------------------------------------------------------
+		답안
+
+문제9)
+	HashSet set = new HashSet();
+	set.put = "class01";
+	set.put = "class02";
+	set.put = "class03";
+	
+	Iterator itor = set.iterator();
+	While(itor.hasNext()){
+		System.out.println(itor.next());
+	}
+	----------------------------------------------------------------
+		답안
