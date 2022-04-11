@@ -9,6 +9,7 @@
 # 클래스 + 함수 많이 만들어보고 문제 풀어보기
 # StarUML 논리처리 다이어그램 그리는 프로그램
 # 트랜잭션 : "일을 처리하는 단위" 
+# 프로그램 버전 : major.minor.micro
 # JDBC 사용법
   - MVN Repository<br>
   	1. Ojdbc6 검색
@@ -259,4 +260,10 @@ Thread(스레드)<br>
 		ex) CHAR(10) -> 'A' -> 이 문자를 기억할 때 10바이트를 모두 사용
 		    VARCHAR2(10) -> 'A' -> 1바이트로 문자 기억<br>
 	3. 날짜
+
+# html
+2020-06 (4.16) 클릭
+Enterprise Java Developers 설치
+Static web project	: 이미 만드렁진 문서를 서버가 제공하는 프로젝트
+Dynamic web project	: 요청 내용에 따라서 그때그때 서버가 문서를 만들어서 제공하는 프로젝트
 </pre>
