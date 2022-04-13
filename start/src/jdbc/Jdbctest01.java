@@ -87,22 +87,23 @@ public class Jdbctest01 {
 		System.out.print("부서번호로 조회 : dno\n직급으로 조회 : job\n모든사원 조회 : all\n프로그램 종료 : exit\n명령 입력 : ");
 		String str = sc.nextLine();
 		
-		switch(str) {
-		case "dno":
-			getDnoInfo(sc);
-			break;
-		case "job":
-			getJobInfo(sc);
-			break;
-		case "all":
-			getAll();
-		case "exit":
-			System.out.println("*** 프로그램을 종료합니다. ***");
-			sc.close();
-			return;
+		while(true) {
+			switch(str) {
+			case "dno":
+				getDnoInfo(sc);
+				break;
+			case "job":
+				getJobInfo(sc);
+				break;
+			case "all":
+				getAll();
+			case "exit":
+				System.out.println("*** 프로그램을 종료합니다. ***");
+				sc.close();
+				return;
+			}
 		}
 
-		sc.close();
 	}
 	
 	// 직급을 입력받아서 해당 직급의 사원들의 정보를 조회해주는 함수
@@ -198,6 +199,7 @@ public class Jdbctest01 {
 		// 할일
 		// 메세지 출력하고	+ 부서번호와 부서명 알려주기
 		
+		loop:
 		while(true){
 			System.out.println("부서번호를 입력하세요! 이전 단계는 -1을 입력하세요.");
 			String sql;
@@ -231,7 +233,7 @@ public class Jdbctest01 {
 				// 이 경우는 이전 단계로 이동하길 원하는 경우이므로
 				// 이 함수의 실행을 즉시 종료한다.
 	
-				return;
+				break loop;
 			}
 			// 이 경우는 부서번호를 입력받은 경우이므로
 			// 부서번호에 소속된 사원들의 정보를 조회하면 된다.
