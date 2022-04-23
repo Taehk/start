@@ -10,6 +10,9 @@ public class JEmpSQL {
 	public final int SEL_LAST		= 1002;
 	
 	public final int INSERT_JEMP	= 3001;
+	public final int INSERT_JEMP_D30 = 3002;
+	
+	public final int DEL_JEMP_D30	= 4001;
 	
 	public final int ADD_TABLE		= 5001;
 	
@@ -64,6 +67,24 @@ public class JEmpSQL {
 				buff.append("		?, ?, sysdate, ? ");
 				buff.append(") ");
 				break;
+				
+			case INSERT_JEMP_D30:
+				buff.append("INSERT INTO jbackup ");
+				buff.append("SELECT ");
+				buff.append("	e.*, sysdate ");
+				buff.append("FROM ");
+				buff.append("	jemp e ");
+				buff.append("WHERE ");
+				buff.append("	deptno = 30 ");
+				break;
+				
+			case DEL_JEMP_D30:
+				buff.append("DELETE TABLE ");
+				buff.append("	jemp ");
+				buff.append("WHERE ");
+				buff.append("	deptno = 30 ");
+				break;
+				
 		}
 		// buff를 문자열로 변환해서 반환
 		return buff.toString();

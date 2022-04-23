@@ -111,6 +111,34 @@ public class JEmpDao {
 		return cnt;
 	}
 	
+	
+	
+	// 제니 데이터 입력 전용 함수
+	public void addJennie() {
+
+		// Jennie 데이터를  추가해보자. 이름, 직급, 부서번호
+		String name = "JENNIE";
+		String job = "MANAGER";
+		int dno = 40;
+		// vo 만들고
+		EmpVO eVO = new EmpVO();
+		// 데이터 채우고
+		eVO.setEname(name);
+		eVO.setJob(job);
+		eVO.setDno(dno);
+		// 데이터베이스 작업 함수 호출...
+		int result = insertJemp(eVO);
+		if(result == 1) {
+			System.out.println("### "+name+"사원의 데이터 입력에 성공했습니다.");
+		}else {
+			System.out.println("### "+name+"사원 추가가 실패했습니다.");
+		}
+		
+	}
+	
+	// 추가된 사원의 정보를 조회해서 출력하는 기능의 함수
+	
+	
 	//	마지막에 추가된 사원의 정보를 조회해주는 함수
 	public EmpVO selLast() {
 		// 할일
@@ -152,5 +180,56 @@ public class JEmpDao {
 		}
 		
 		return eVO;
+	}
+	
+	// 30번 사원들 백업 전담 처리함수
+		// INSERT명령이므로 executeUpdate()사용하므로 int반환
+	public int backupDno30() {
+		// 할일
+		// 반환값 변수
+		int cnt = 0;
+		
+		// 커넥션꺼내기
+		con = db.getCON();
+		// 질의명령 꺼내기
+		String sql = jSQL.getSQL(jSQL.INSERT_JEMP_D30);
+		// 명령전달도구 준비
+		stmt = db.getSTMT(con);
+		
+		try {
+		// 질의명령 보내고 결과 받기
+			cnt = stmt.executeUpdate(sql);
+		}	catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			db.close(stmt);
+			db.close(con);
+		}
+		return cnt;
+	}
+	
+	// 30번 부서원 삭제 전담 처리 함수
+	public int delDno30() {
+		// 할일
+		// 반환값변수
+		int cnt = 0;
+		// 커넥션
+		con = db.getCON();
+		// 질의명령
+		String sql = jSQL.getSQL(jSQL.DEL_JEMP_D30);
+		// 명령전달
+		stmt = db.getSTMT(con);
+		// 질의명령보내고 결과
+		try {
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			db.close(stmt);
+			db.close(con);
+		}
+		// 결과내보내고
+		
+		return cnt;
 	}
 }
